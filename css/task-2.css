@@ -1,0 +1,24 @@
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px; /*сначала нижний отступ потом боковой */
+  justify-content: center;
+}
+img {
+  width: 360px;
+  height: 300px;
+  object-fit: cover; /*зображення масштабується зі збереженням пропорцій, щоб повністю заповнити контейнер.*/
+}
+img:hover {
+  transform: scale(1.003);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+p a {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+  }

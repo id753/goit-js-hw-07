@@ -1,0 +1,97 @@
+body {
+    width: 534px;
+height: 302px;
+    margin: 0 auto;
+}
+#controls input {
+    border: 1px solid #808080;
+border-radius: 8px;
+/* padding: 8px 72px; */
+padding-left: 72px;
+width: 150px;
+height: 40px;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #2e2f42;
+
+margin-right: 16px;
+margin-bottom: 32px;
+margin-top: 56px;
+}
+#controls input:hover {
+    border: 1px solid #000;
+border-radius: 8px;
+
+
+}
+#name-input:active {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    border: 1px solid #808080;  
+}
+/* выбрать второго потомка , пробел! */
+#controls :nth-child(2) { 
+    background: #4e75ff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 120px;
+    height: 40px;
+  border: none; /* убрать бордер */
+
+  font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+
+margin-right: 16px;
+
+}
+#controls :nth-child(2):hover  {
+    transform: scale(1.005);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: #6c8cff;
+
+}
+
+#controls :nth-child(3) { 
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 120px;
+    height: 40px;
+    background: #ff4e4e;
+  border: none; /* убрать бордер */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  
+}
+#controls :nth-child(3):hover  {
+    transform: scale(1.005);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ff7070;
+
+}
+#boxes {
+    display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: row;
+gap: 10px;
+
+padding-top: 32px;
+margin-top: 16px;
+}
+p a {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+  }

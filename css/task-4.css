@@ -1,0 +1,74 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 24px;
+  width: 408px;
+  height: 256px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  /* margin-top: 8px; */
+  /* margin-bottom: 8px; */
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* gap: 16px; */
+}
+input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+input:hover {
+    border: 1px solid #000;
+border-radius: 4px;
+
+}
+input:active {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    border: 1px solid #808080;  
+}
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+  border: none; /* убрать бордер */
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  margin-top: 8px;
+}
+
+button:hover  {
+    transform: scale(1.005);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: #6c8cff;
+
+}
+p a {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+  }

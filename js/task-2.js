@@ -27,6 +27,8 @@ const images = [
 ];
 
 const gallery = document.querySelector("ul.gallery");
+const fragment = document.createDocumentFragment(); // Создаем DocumentFragment
+
 images.forEach(item => {//перебор массива обьектов - картинки, в каждом обьекте алт и юрл
   const img = document.createElement("img"); //создание тега имг
   img.src = item.url; //присвоение атрибутам имг ссылку, алт из масива обьектов
@@ -34,8 +36,10 @@ images.forEach(item => {//перебор массива обьектов - ка�
 
   const li = document.createElement("li");
   li.append(img); //добавить имг в ли
-  gallery.append(li);//добавить ли в юл
-})
+  
+  fragment.append(li); // Добавляем <li> в DocumentFragment
+});
 
+gallery.append(fragment); // Вставляем DocumentFragment в <ul>
 
 // console.log(gallery);

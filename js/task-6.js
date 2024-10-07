@@ -25,20 +25,23 @@ function handleDestroy() {
 
 // Функція для створення елементів
 function createBoxes(amount) {
-    const boxes = []; // пустой массив у який пізніше будуть додаватися створені елементи <div
+
+  const fragment = document.createDocumentFragment(); // Створюємо DocumentFragment
+
+    // const boxes = []; // Замість зберігання елементів у масиві, ми тепер додаємо їх прямо в DocumentFragment. Цей фрагмент діє як тимчасовий контейнер для елементів, подібний до масиву, але з тією різницею, що він дозволяє уникнути багаторазових маніпуляцій з DOM.пустой массив у який пізніше будуть додаватися створені елементи <div
     for (let i = 0; i < amount; i++) {
         const size = 30 + i * 10; // 30px, 40px, 50px, ...
         const box = document.createElement('div');
         box.style.width = `${size}px`;
         box.style.height = `${size}px`;
         box.style.backgroundColor = getRandomHexColor();
-        boxes.push(box); //добавляет каждый созданный элемент в массив boxes.
-        // console.log(boxes);
-        
+        // boxes.push(box); //добавляет каждый созданный элемент в массив boxes.
+
+         fragment.appendChild(box); // Додаємо елементи до фрагменту
     }
     boxesContainer.innerHTML = ""; // Очищение старых элементов
-    boxes.forEach(box => boxesContainer.append(box)); // Добавление новых элементов
-    
+    // boxes.forEach(box => boxesContainer.append(box)); // Добавление новых элементов
+    boxesContainer.appendChild(fragment); // Додаємо всі елементи за одну операцію
 }
 
 // Функція для очищення елементів
